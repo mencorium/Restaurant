@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.card {
+    width: 800px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px;
+}
+.card-left, .card-right {
+    width: 50%;
+    padding: 20px;
+}
+.card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.card-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+.card-left img:hover {
+    opacity: 0.7;
+}
+.card-left button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card-left button:hover {
+    background-color: #218838;
+}
+.card-right {
+    display: flex;
+    flex-direction: column;
+}
+.card-right .sticky {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 0;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card-right .details-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.card-right .details-content {
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 2px solid #28a745; /* Colored line */
+    padding-top: 10px;
+}
+.card-right .details-content p {
+    margin: 5px 0;
+    color: #555;
+}
+.card-right .rating {
+    font-size: 18px;
+    color: #ff9900;
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    z-index: 1;
+}
+.card-right hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        width: 90%;
+    }
+    .card-left, .card-right {
+        width: 100%;
+        padding: 10px;
+    }
+    .card-left button {
+        bottom: 10px;
+        left: 10px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <link rel="stylesheet" href="{%static 'css/main.css' %}">
+</head>
+<body>
+    <div class="card" id="myModal">
+        <div class="card-left">
+            <img src="D:\learnlikePro\django\restaurant\meals\static\meals\logo4.png" alt="Product Image">
+            <button>Buy Now</button>
+        </div>
+        <div class="card-right">
+            <div class="sticky">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Product Name</h2>
+                <p><strong>Ingredients:</strong> List of ingredients</p>
+                <p><strong>Category:</strong> Product category</p>
+            </div>
+            <div class="details-header">
+                <h2>Details</h2>
+            </div>
+            <div class="details-content">
+                <p>Detailed description of the product that can be very long. 
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. 
+                   Cras venenatis euismod malesuada. Nulla pharetra auctor neque nec consectetur. Praesent vel nulla vitae est fermentum 
+                   malesuada in sit amet justo. Curabitur facilisis metus ac metus scelerisque, eget lacinia nulla suscipit. Quisque venenatis
+                   sollicitudin ex eu fermentum. Integer nec tincidunt orci. Proin vitae tincidunt justo, in consectetur turpis. Aenean id
+                   justo eu turpis euismod lacinia. Integer et lectus id metus vehicula malesuada.</p>
+                <hr>
+            </div>
+            <div class="sticky rating">
+                Overall Rating: ★★★★☆
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to control modal behavior
+        function openModal() {
+            document.getElementById("myModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+
